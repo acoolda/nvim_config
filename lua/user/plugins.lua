@@ -101,13 +101,13 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
-  
+
   use {
   -- Treesitter
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use { 
+  use {
     "p00f/nvim-ts-rainbow",
     requires= "nvim-treesitter/nvim-treesitter"
   }
@@ -119,8 +119,13 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   -- git插件
   use "lewis6991/gitsigns.nvim"
+
+  -- nvim-tree
+  use 'kyazdani42/nvim-tree.lua'
+  use "nvim-tree/nvim-web-devicons"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
