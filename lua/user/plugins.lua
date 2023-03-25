@@ -125,6 +125,10 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-web-devicons"
   -- 缓冲tab叶
   use "akinsho/bufferline.nvim"
+  -- 状态拦
+  use 'nvim-lualine/lualine.nvim'
+  -- 终端
+  use "akinsho/toggleterm.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
