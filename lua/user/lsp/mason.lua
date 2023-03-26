@@ -1,3 +1,4 @@
+-- 这些是自动安装插件，如果没有安装这些插件，则会自动安装
 local servers = {
 	"lua_ls",
 	"cssls",
@@ -7,6 +8,9 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+  "gopls",
+  -- markdonw
+  "marksman"
 }
 
 local settings = {
