@@ -76,9 +76,11 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
+  use "rcarriga/nvim-notify"   -- notify
+
 
   -- Colorschemes
-  use "lunarvim/colorschemes"  -- A bunch of colorschemes you can try out
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   -- cmp plugins
@@ -115,6 +117,9 @@ return packer.startup(function(use)
   -- 经典vim插件
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
+  use "tpope/vim-repeat"      --  . command enhance
+  use "tpope/vim-surround"    -- vim surround
+
   -- 注释相关插件
   use "numToStr/Comment.nvim" -- Easily comment stuff
   -- git插件
@@ -129,7 +134,6 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   -- 终端
   use "akinsho/toggleterm.nvim"
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
