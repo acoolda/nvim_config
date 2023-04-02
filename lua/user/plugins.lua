@@ -119,7 +119,11 @@ return packer.startup(function(use)
 
   use "tpope/vim-repeat"      --  . command enhance
   use "tpope/vim-surround"    -- vim surround
-
+  -- easymotion 增强
+  use {
+    "phaazon/hop.nvim", -- like easymotion, but more powerful
+    branch = "v2",      -- optional but strongly recommended
+  }
   -- 注释相关插件
   use "numToStr/Comment.nvim" -- Easily comment stuff
   -- git插件
