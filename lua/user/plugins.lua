@@ -140,6 +140,9 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+  -- session管理器
+  use "Shatur/neovim-session-manager"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

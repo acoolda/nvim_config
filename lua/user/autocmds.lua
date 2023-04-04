@@ -1,9 +1,7 @@
-
 -- 全部自动监听命令
-vim.cmd[[
+vim.cmd [[
 augroup _auto_format
   autocmd!
-  autocmd BufWritePre * :lua vim.lsp.buf.format()
+  autocmd BufWritePre *.go,*.lua :lua vim.lsp.buf.format()
 augroup end
 ]]
-
