@@ -1,6 +1,5 @@
 # Compiled Lua sources
 luac.out
-
 # macos
 .DS_Store
 # luarocks build files
