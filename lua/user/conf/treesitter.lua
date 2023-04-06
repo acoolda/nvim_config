@@ -4,16 +4,15 @@ configs.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter 查看支持语言
   -- ensure_installed = {"lua","go","vim","python"},
   -- 全部安装
-   ensure_installed = "all",
-   sync_install = false, 
-   ignore_install = { "" }, -- List of parsers to ignore installing
-   highlight = {
-    enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
+  ensure_installed = "all",
+  sync_install = false,
+  ignore_install = { "" },  -- List of parsers to ignore installing
+  highlight = {
+    enable = true,          -- false will disable the whole extension
+    disable = { "" },       -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
-
   },
-  indent = { enable = true, disable = { "yaml" } },
+  indent = { enable = true, },
   -- 给括号添加不同颜色
   rainbow = {
     enable = true,
@@ -24,4 +23,3 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
-

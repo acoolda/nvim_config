@@ -7,3 +7,4 @@ require "user.lsp"
 require "user.autocmds"
 
 require "user.conf"
+require "user.dap"

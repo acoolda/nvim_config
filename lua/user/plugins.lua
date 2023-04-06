@@ -142,6 +142,24 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
   -- session管理器
   use "Shatur/neovim-session-manager"
+  -- 项目管理
+  use "ahmedkhalf/project.nvim"
+  use "goolord/alpha-nvim"
+  -- 显示对齐线
+  use "lukas-reineke/indent-blankline.nvim"
+  -- 加速插件加载
+  use "lewis6991/impatient.nvim"
+
+  -- Buffer closing
+  use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
+
+  -- dap 调试器
+  use "mfussenegger/nvim-dap"
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  -- 调试的时候的显示文字
+  use "theHamsta/nvim-dap-virtual-text"
+  -- go调试器
+  use { "leoluz/nvim-dap-go", requires = { "mfussenegger/nvim-dap" } }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
