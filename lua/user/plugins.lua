@@ -161,6 +161,16 @@ return packer.startup(function(use)
   -- go调试器
   use { "leoluz/nvim-dap-go", requires = { "mfussenegger/nvim-dap" } }
 
+  -- 测试插件
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim"
+    }
+  }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
