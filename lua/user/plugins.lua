@@ -160,6 +160,8 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text"
   -- go调试器
   use { "leoluz/nvim-dap-go", requires = { "mfussenegger/nvim-dap" } }
+  -- 代码大纲
+  use "stevearc/aerial.nvim"
 
   -- 测试插件
   use {

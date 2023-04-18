@@ -84,5 +84,8 @@ keymap("n", "<leader>ff",
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers()<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags()<cr>", opts)
+keymap("n", "<leader>fa", "<cmd>Telescope aerial<cr>", opts)
 
 keymap("n", "<leader>bd", "<cmd>Bdelete<cr>", opts)
+-- 打开文件大纲
+keymap("n", "<leader>a", "<cmd>AerialToggle<cr>", opts)
