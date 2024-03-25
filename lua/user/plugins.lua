@@ -100,10 +100,10 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"           -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
-  -- Telescope
+  --  -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
-
+  --
   use {
     -- Treesitter
     "nvim-treesitter/nvim-treesitter",
@@ -130,14 +130,18 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- nvim-tree
-  use 'kyazdani42/nvim-tree.lua'
-  use "nvim-tree/nvim-web-devicons"
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
   -- 缓冲tab叶
   use "akinsho/bufferline.nvim"
   -- 状态拦
   use 'nvim-lualine/lualine.nvim'
   -- 终端
-  use "akinsho/toggleterm.nvim"
+  --   use "akinsho/toggleterm.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   -- session管理器
@@ -154,12 +158,12 @@ return packer.startup(function(use)
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
 
   -- dap 调试器
-  use "mfussenegger/nvim-dap"
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  -- use "mfussenegger/nvim-dap"
+  -- use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   -- 调试的时候的显示文字
-  use "theHamsta/nvim-dap-virtual-text"
+  -- use "theHamsta/nvim-dap-virtual-text"
   -- go调试器
-  use { "leoluz/nvim-dap-go", requires = { "mfussenegger/nvim-dap" } }
+  -- use { "leoluz/nvim-dap-go", requires = { "mfussenegger/nvim-dap" } }
   -- 代码大纲
   use "stevearc/aerial.nvim"
 
@@ -169,10 +173,10 @@ return packer.startup(function(use)
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim"
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/neotest-go"
     }
   }
-
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

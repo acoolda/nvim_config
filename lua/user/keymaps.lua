@@ -38,16 +38,13 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "∆", "<Esc>:m .+1<CR>==gi", opts) -- 对应其他平台<A-j>
+keymap("n", "˚", "<Esc>:m .-2<CR>==gi", opts) -- <A-k>
 
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
-
--- 快速退出,不保存
-keymap("i", "Q", ":q!", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -67,8 +64,8 @@ keymap("v", "p", '"_dP', opts)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "∆", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "˚", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
@@ -81,9 +78,9 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>ff",
   "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
   opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fb", "<cmd>Telescope buffers()<cr>", opts)
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags()<cr>", opts)
+-- keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<leader>fb", "<cmd>Telescope buffers()<cr>", opts)
+-- keymap("n", "<leader>fh", "<cmd>Telescope help_tags()<cr>", opts)
 keymap("n", "<leader>fa", "<cmd>Telescope aerial<cr>", opts)
 
 keymap("n", "<leader>bd", "<cmd>Bdelete<cr>", opts)

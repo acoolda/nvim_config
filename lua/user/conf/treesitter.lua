@@ -4,12 +4,12 @@ configs.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter 查看支持语言
   -- ensure_installed = {"lua","go","vim","python"},
   -- 全部安装
-  ensure_installed = "all",
+  ensure_installed = { "lua", "go", "vim", "python", "vimdoc" },
   sync_install = false,
-  ignore_install = { "" },  -- List of parsers to ignore installing
+  ignore_install = { "" }, -- List of parsers to ignore installing
   highlight = {
-    enable = true,          -- false will disable the whole extension
-    disable = { "" },       -- list of language that will be disabled
+    enable = true,         -- false will disable the whole extension
+    disable = { "" },      -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, },
