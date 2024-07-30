@@ -185,6 +185,19 @@ return {
                 },
               },
             },
+            solargraph = {
+              cmd = { "solargraph", "stdio" },
+              filetypes = { "ruby", "rake" },
+              init_options = {
+                formatting = true
+              },
+              root_dir = util.root_pattern("Gemfile", ".git"),
+              settings = {
+                solargraph = {
+                  diagnostics = true,
+                },
+              },
+            },
           }
           if opts[server_name] then
             local server_opt = opts[server_name]
@@ -216,15 +229,15 @@ return {
       local null_ls = require("null-ls")
       null_ls.setup({
         debug = false,
-        sources = {
-          null_ls.builtins.diagnostics.cpplint.with({
-            -- override args completely to make sure ordering is correct
-            args = {
-              "--filter=-legal/copyright,-build/include_subdir,-whitespace/line_length,-readability/casting",
-              "$FILENAME",
-            },
-          }, null_ls.builtins.code_actions.cpplint),
-        },
+        -- sources = {
+        --   null_ls.builtins.diagnostics.cpplint.with({
+        --     -- override args completely to make sure ordering is correct
+        --     args = {
+        --       "--filter=-legal/copyright,-build/include_subdir,-whitespace/line_length,-readability/casting",
+        --       "$FILENAME",
+        --     },
+        --   }, null_ls.builtins.code_actions.cpplint),
+        -- },
         temp_dir = '/tmp',
       })
       require("mason-null-ls").setup({

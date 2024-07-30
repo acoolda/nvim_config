@@ -597,7 +597,9 @@ return {
           "py",
           "lua",
           "sh",
-          'proto'
+          'proto',
+          'rb',
+          'go'
         },
         -- modes_denylist: modes to not illuminate, this overrides modes_allowlist
         -- See `:help mode()` for possible values
