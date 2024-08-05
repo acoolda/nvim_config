@@ -198,6 +198,13 @@ return {
                 },
               },
             },
+            rubocop = {
+              cmd = { "rubocop", "--lsp" },
+              filetypes = {
+                "ruby"
+              },
+              root_dir = util.root_pattern("Gemfile", ".git"),
+            },
           }
           if opts[server_name] then
             local server_opt = opts[server_name]
@@ -228,7 +235,7 @@ return {
     config = function()
       local null_ls = require("null-ls")
       null_ls.setup({
-        debug = false,
+        debug = true,
         -- sources = {
         --   null_ls.builtins.diagnostics.cpplint.with({
         --     -- override args completely to make sure ordering is correct
@@ -243,10 +250,6 @@ return {
       require("mason-null-ls").setup({
         automatic_setup = true,
         ensure_installed = {
-          "isort@5.11.5",
-          "cpplint",
-          "shfmt",
-          "markdown_oxide"
         },
         handlers = {},
       })
