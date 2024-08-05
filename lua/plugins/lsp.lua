@@ -74,6 +74,7 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
     },
+    -- 注意lsp的安装依赖当前环境的对应语言的编译器，像py跟rb这种有虚拟环境的比较难搞
     config = function()
       require("mason-lspconfig").setup()
       require("mason-lspconfig").setup_handlers({
