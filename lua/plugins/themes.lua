@@ -2,6 +2,9 @@ return {
   {
     'Mofiqul/dracula.nvim',
     priority = 1000,
+    config = function()
+      -- vim.cmd [[colorscheme dracula-soft]]
+    end
   },
   {
     "miikanissi/modus-themes.nvim",
@@ -23,7 +26,18 @@ return {
           variables = {},
         },
       })
-      vim.cmd([[colorscheme modus_operandi]])
+      -- vim.cmd([[colorscheme modus_operandi]])
+    end
+  },
+  {
+    "navarasu/onedark.nvim",
+    priority = 900,
+    config = function()
+      require("onedark").setup({
+        -- dark,darker,cool,deep,warm warmer
+        style = "warm",
+      })
+      vim.cmd [[colorscheme onedark]]
     end
   },
 }
